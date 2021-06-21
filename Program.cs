@@ -89,18 +89,4 @@ namespace LNDStreamingBackup
         }
     }
 
-    public class LndChannelBalanceFeeData
-    {
-        public string Alias { get; set; }
-        public string PubKey { get; set; }
-        public ulong ChanId { get; set; }
-        public long RemoteFeeBaseMsat { get; set; }
-        public long RemoteFeeRateMilliMsat { get; set; }
-        public long LocalFeeBaseMsat { get; set; }
-        public long LocalFeeRateMilliMsat { get; set; }
-        public long ChannelCapacity { get; set; }
-        public long NodeCapacity { get; set; }
-        public double Ratio { get; set; }
-        public bool IsPrivate { get; set; }
-    }
 }
