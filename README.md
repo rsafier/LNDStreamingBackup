@@ -7,4 +7,4 @@ It will upload a new channel.backup file every time it gets notified via the gRP
 
 
 ## How to use
-```./LNDStreamingBackup <path to tls.cert> <path to macaroon> <Azure blob storage endpoint>  <Azure storage container connection string> <blob container to save to>```
+```./LNDStreamingBackup <path to tls.cert> <path to macaroon> <Azure storage container connection string> <blob container to save to>```
