@@ -78,8 +78,8 @@ namespace LNDStreamingBackup
                 while (await call.ResponseStream.MoveNext())
                 {
                     var backup = call.ResponseStream.Current;
-                    BlobClient blobClient = containerClient.GetBlobClient("SingleChanBackups.bak");
-                    BlobClient blobClient2 = containerClient.GetBlobClient("MultiChanBackup.bak");
+                    BlobClient blobClient = containerClient.GetBlobClient($"{info.IdentityPubkey}.SingleChanBackups.bak");
+                    BlobClient blobClient2 = containerClient.GetBlobClient($"{info.IdentityPubkey}.MultiChanBackup.bak");
                     await blobClient.UploadAsync(new MemoryStream(Encoding.UTF8.GetBytes(backup.SingleChanBackups.ToString())), true);
                     await blobClient2.UploadAsync(new MemoryStream(Encoding.UTF8.GetBytes(backup.MultiChanBackup.ToString())), true);
                 }
